@@ -1,4 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.fira{
+    font-family: 'Fira Sans', sans-serif!important;
+    line-height: 1.5em!important;
+  }
+  
+  .khula{
+    font-family: 'khula', sans-serif!important;
+    line-height: 1.5em!important;
+  
+  }
+  
+  .nunito{
+    font-family: 'nunito', sans-serif!important;
+    line-height: 1.5em!important;
+  }
+  
+  .nunito-sans{
+    font-family: 'Nunito Sans', sans-serif!important;
+    line-height: 1.5em!important;
+  }
+  
+  
+  body{
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Khula', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  p {
+    font-family: "Nunito Sans", sans-serif;
+  }
 .j-w-20{
     width: 20%;
 }

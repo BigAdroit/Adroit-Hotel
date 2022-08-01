@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input,} from '@angular/core';
 import { Router, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -16,6 +16,8 @@ export class HeaderComponent implements OnInit {
     "carousel-bg4",
     "carousel-bg5",
   ]
+  @Input() textTitle! : string
+  @Input() content! : string 
   constructor( private router : Router) { }
 
   ngOnInit(): void {
@@ -27,5 +29,4 @@ export class HeaderComponent implements OnInit {
       }
     }, 3000)
   }
-
 }

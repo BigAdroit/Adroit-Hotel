@@ -1,12 +1,12 @@
 <div class="d-flex w-100 my-3 bg">
     <div class="w-50">
         <div class="">
-            <div class="room-list">
+            <div class="room-list khula">
                 <div class="m-2">
                     <img src="{{currentRoom.cloudinary_url}}" alt="" srcset="">
                     <div>
-                        <h5>{{currentRoom.roomName}}</h5>
-                        <p class="price-margin"><span>$</span><span class="price">{{currentRoom.roomPrice}}</span><span>/ per night</span></p>
+                        <h5 class="fira">{{currentRoom.roomName}}</h5>
+                        <p class="price-margin khula"><span>$</span><span class="price">{{currentRoom.roomPrice}}</span><span>/ per night</span></p>
                         <p>Pefect for traveling couples</p>
                         <p> {{currentRoom.roomDescription}} </p>
                     </div>
@@ -17,7 +17,7 @@
     <div class="w-50 container mt relative">
         <div class="success-modal-con " *ngIf="success">
            <div class="align-item-center justify-content-between og-flex">
-                <div class="text-success fw-bold">
+                <div class="text-success fw-bold nunito">
                     Room booked successfully check your mail 
                 </div>
                 <div>
@@ -30,7 +30,7 @@
                 <span class="sr-only"></span>
             </div>
         </div>
-        <form [formGroup]="formData" (ngSubmit)="bookNow(formData.value)">
+        <form [formGroup]="formData" (ngSubmit)="bookNow(formData.value)" class="nunito">
             <div>
                 <label for="">Firstname:</label>
                 <input type="text" class="form-control" required formControlName="firstname">
