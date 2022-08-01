@@ -1,0 +1,36 @@
+<section>
+    <div class="d-flex w-100">
+        <div class="w-60 {{carouselImages[counter]}} vh-100">
+            <div class="display-text">
+                <div class="header">
+                    <p> Discover and Enjoy </p>
+                    <h4> Everything you need in Adroit Hotel</h4>
+                </div>
+            </div>
+        </div>
+        <div class="w-40 d-flex align-items-center px-4">
+            <div class="w-100">
+                <div>
+                    <small class="text-danger" *ngIf="showError"> {{errorMessage}}</small>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="signIn(loginForm.value)">
+                    <div class="w-100 position-relative">
+                        <img src="assets/imgs/email icon.svg" class="position-absolute email-icon" alt="">
+                        <input type="text" class="form-control w-100 padding" placeholder="Your Email" formControlName="email" [class.is-invalid]="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" required>
+                        <small class="text-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid && loginForm.get('email')?.errors?.['required']"> email adress is required! </small>
+                        <small class="text-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid && loginForm.get('email')?.errors?.['email']"> Please use a valid email address! </small>
+                    </div>
+                    <div class="w-100 mt-3 position-relative">
+                        <img src="assets/imgs/password.svg" class="position-absolute email-icon" alt="">
+                        <input type="password" class="form-control w-100 padding" placeholder="Your Password" formControlName="password">
+                        <small class="text-danger" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid && loginForm.get('password')?.errors?.['required']"> password is required! </small>
+                        <small class="text-danger" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid && loginForm.get('password')?.errors?.['minlength']"> password not complete </small>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

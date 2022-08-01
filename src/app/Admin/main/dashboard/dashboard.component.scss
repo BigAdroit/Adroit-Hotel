@@ -1,0 +1,42 @@
+.j-dashoard{
+    background: #F4F9FD;
+}
+.j-dropdown-header{
+    font-size: 13px;
+}
+.top-bordered{
+    border-radius: 10px 10px 0 0;
+}
+.bottom-bordered{
+    border-radius: 0 0 10px 10px;
+}
+.j-dropdown-content{
+    margin-top: 10px;
+    border-radius: 10px;
+    min-width: 210px;
+    background: #fff;
+    font-size: 13px;
+    select, select option{
+        font-size: 13px;
+    }
+    .dropdown-filter{
+        padding: 20px;
+        background: #F9F9F9;
+        border-radius: 10px 10px 0 0;
+        input{
+            font-size: 13px;
+        }
+    }
+    .j-dropdown-item{
+        padding: 10px;
+    }
+    .j-dropdown-item:hover{
+        background: #F9F9F9;
+    }
+    .j-dropdown-border-buttom{
+        border-bottom: 1px solid #D8D8D8;
+    }
+}
+.hover:hover {
+    background: #eeee;
+}

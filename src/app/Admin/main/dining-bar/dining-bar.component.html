@@ -1,0 +1,122 @@
+<div class="j-d-flex j-dashboard">
+    <div class="j-w-20 j-left">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="j-w-80 j-right">
+        <div class="j-nav-bar-holder">
+            <app-header title="Dining & Bar "></app-header>
+        </div>
+        
+        <div class="main-content px-3">
+            <div class="pt-4">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                    <p class="employees">All Bookings <span>13</span></p>
+                    <div class="btn btn-primary o-bg-blue" routerLink="create-company"> Book a Room </div>
+                </div>
+            </div>
+            <div class="container bg-white p-4 w-100">
+                <app-table-head></app-table-head>
+                <div>
+                    <div class="heading d-flex justify-space-between  main-content text-left p-3 mt-3 role b-rad">
+                        <div class="w-25 fw-bold">
+                            Guest Name
+                        </div>
+                        <div class="w-20 fw-bold">
+                            Date
+                        </div>
+                        <div class="w-20 fw-bold">
+                            Time
+                        </div>
+                        <div class="w-20 fw-bold">
+                            Room
+                        </div>
+                        <div class="w-15 fw-bold">
+                            Action
+                        </div>
+                    </div>
+                    <div class="justify-content-between d-flex text-left p-3 my-2 border-bottom align-items-center">
+                        <div class="w-25 left-align">
+                            Osemegbe Badoo
+                        </div>
+                        <div class="w-20">
+                            <p>November 10, 2021</p>
+                        </div>
+                        <div class="w-20">
+                            <p>9:20pm</p>
+                        </div>
+                        <div class="w-20">
+                            <p>RM 305</p>
+                        </div>
+                        <div class="w-15 d-flex gap-1 px-2 align-items-center pointer" routerLink="view-company">
+                            <div>
+                                <img src="assets/imgs/eye pass.svg" alt="">
+                            </div>
+                            <p class="m-0">View</p>
+                        </div>
+                    </div>
+
+                    <div class="justify-content-between d-flex text-left p-3 my-2 border-bottom align-items-center">
+                        <div class="w-25 left-align">
+                            Ronaldo
+                        </div>
+                        <div class="w-20">
+                            <p>November 10, 2021</p>
+                        </div>
+                        <div class="w-20">
+                            <p>9:20pm</p>
+                        </div>
+                        <div class="w-20">
+                            <p>RM 305</p>
+                        </div>
+                        <div class="w-15 d-flex gap-1 px-2 align-items-center pointer" routerLink="view-company">
+                            <div>
+                                <img src="assets/imgs/eye pass.svg" alt="">
+                            </div>
+                            <p class="m-0">View</p>
+                        </div>
+                    </div>
+
+                    <div class="justify-content-between d-flex text-left p-3 my-2 border-bottom align-items-center">
+                        <div class="w-25 left-align">
+                            Messi 
+                        </div>
+                        <div class="w-20">
+                            <p>November 10, 2021</p>
+                        </div>
+                        <div class="w-20">
+                            <p>9:20pm</p>
+                        </div>
+                        <div class="w-20">
+                            <p>RM 305</p>
+                        </div>
+                        <div class="w-15 d-flex gap-1 px-2 align-items-center pointer" routerLink="view-company">
+                            <div>
+                                <img src="assets/imgs/eye pass.svg" alt="">
+                            </div>
+                            <p class="m-0">View</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <!--  Pagination  -->
+                <div class="d-flex justify-content-between p-3 mt-4 pointer">
+                    <div>
+                        <!-- Showing {{allCompanies?.length ? allCompanies.length: 0}} out of {{allCompanies?.length ? allCompanies.length: 0}} -->
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center gap-3 pointer">
+                        <span>
+                            Prev
+                        </span>
+                        <span class="btn btn-primary rounded-0 pointer"> 1</span>
+                        <span>  2 </span>
+                        <span>  3 </span>
+                        <span>  ... </span>
+                        <span>  Next </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

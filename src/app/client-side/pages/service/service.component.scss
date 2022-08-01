@@ -1,0 +1,31 @@
+.text-left  {
+    text-align: left !important;
+}
+.w-60 {
+    width: 60%
+}
+.w-40 {
+    width:40%;
+}
+
+
+@media  screen and (max-width:500px) {
+    .d-flex {
+        flex-direction: column;
+    }
+    .w-60 {
+        width: 100%
+    }
+    .w-40 {
+        width:100%;
+    }
+    .text-left {
+        text-align: center !important;
+    }
+    .order2 {
+        order: 2;
+    }
+    .order1 {
+        order:1;
+    }
+}

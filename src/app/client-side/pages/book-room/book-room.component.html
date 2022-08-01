@@ -1,0 +1,78 @@
+<div class="d-flex w-100 my-3 bg">
+    <div class="w-50">
+        <div class="">
+            <div class="room-list">
+                <div class="m-2">
+                    <img src="{{currentRoom.cloudinary_url}}" alt="" srcset="">
+                    <div>
+                        <h5>{{currentRoom.roomName}}</h5>
+                        <p class="price-margin"><span>$</span><span class="price">{{currentRoom.roomPrice}}</span><span>/ per night</span></p>
+                        <p>Pefect for traveling couples</p>
+                        <p> {{currentRoom.roomDescription}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="w-50 container mt relative">
+        <div class="success-modal-con " *ngIf="success">
+           <div class="align-item-center justify-content-between og-flex">
+                <div class="text-success fw-bold">
+                    Room booked successfully check your mail 
+                </div>
+                <div>
+                    <img src="assets/imgs/success-mark.png" alt="">
+                </div>
+           </div>
+        </div>
+        <div class="loadingModal" *ngIf="loading">
+            <div class="spinner-border text-success" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+        <form [formGroup]="formData" (ngSubmit)="bookNow(formData.value)">
+            <div>
+                <label for="">Firstname:</label>
+                <input type="text" class="form-control" required formControlName="firstname">
+            </div>
+            <div>
+                <label for="">Lastname:</label>
+                <input type="text" class="form-control" required formControlName="lastname">
+            </div>
+            <div class="d-flex gap-4 my-3">
+                <div class="w-50">
+                    <label for="">Phone:</label>
+                    <input type="text" class="form-control" required formControlName="phone">
+                </div>
+                <div class="w-50">
+                    <label for="">Email:</label>
+                    <input type="text" class="form-control" required formControlName="email">
+                </div>
+            </div>
+            <div class="d-flex gap-4 my-3">
+                <div class="w-50">
+                    <label for="">Check-in Date:</label>
+                    <input type="date" class="form-control" required formControlName="clock_in_date">
+                </div>
+                <div class="w-50 out">
+                    <label for="">Check-out Date</label>
+                    <input type="date" class="form-control" required formControlName="clock_out_date">
+                </div>
+            </div>
+            <div class="d-flex gap-4 my-3">
+                <div class="w-50">
+                    <label for="">Check-in Time:</label>
+                    <input type="time" class="form-control" required formControlName="clock_in_time">
+                </div>
+                <div class="w-50 out">
+                    <label for="">Check-out Time:</label>
+                    <input type="time" class="form-control" required formControlName="clock_out_time">
+                </div>
+            </div>
+           <div class="d-flex justify-content-center mt-4 center-btn w-100">
+                <button class="btn btn-primary" [disabled]="loading || formData.invalid"> Book now    </button>
+           </div>
+        </form>
+    </div>
+</div>
+

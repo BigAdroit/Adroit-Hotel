@@ -1,0 +1,143 @@
+<div class="j-d-flex j-dashboard" [class.overlay]="successMessage">
+    <div class="j-w-20 j-left">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="j-w-80 j-right">
+        <div class="j-nav-bar-holder">
+            <app-header title="Guest"></app-header>
+        </div>
+        
+        <div class="main-content px-3">
+            <div class="pt-4">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                    <p class="text-black fw-bold fs-5">Guest Details </p>
+                </div>
+            </div>
+            <div class="container bg-white p-4 w-100 rounded">
+                <div class="w-75 bgColor rounded p-4">
+                    <div class="d-flex gap-5">
+                        <div class="w-50">
+                            <p class="m-0"> Guest Name </p>
+                            <p class="fw-bold"> {{guestDetails.firstname}} {{guestDetails.lastname}} </p>
+                        </div>
+                        <div class="w-50">
+                            <p class="m-0"> Guest Email Address </p>
+                            <p class="fw-bold"> {{guestDetails.email}} </p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <div class="w-50">
+                            <p class="m-0"> Guest Phone Number </p>
+                            <p class="fw-bold"> {{guestDetails.phone}} </p>
+                        </div>
+                        <div class="w-50">
+                            <p class="m-0"> Guest Room  </p>
+                            <p class="fw-bold"> {{guestDetails.room_name}} </p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <div class="w-50">
+                            <p class="m-0"> Guest Clock-in-date </p>
+                            <p class="fw-bold"> {{guestDetails.clock_in_date}} </p>
+                        </div>
+                        <div class="w-50">
+                            <p class="m-0"> Guest Clock-out-date </p>
+                            <p class="fw-bold"> {{guestDetails.clock_out_date}} </p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <div class="w-50">
+                            <p class="m-0"> Number of Days </p>
+                            <p class="fw-bold"> {{days}} days </p>
+                        </div>
+                        <div class="w-50">
+                            <p class="m-0"> Status </p>
+                            <p class="fw-bold text-success"> Active </p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-5">
+                        <div class="w-50">
+                            <p class="m-0"> Number of Days Left </p>
+                            <p class="fw-bold" [class.text-danger]="dateDue"> {{daysLeft}} days</p>
+                        </div>
+                        <div class="w-50">
+                            <p class="m-0"> Bill Status </p>
+                            <p class="fw-bold text-danger"> On Debt </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded mt-3 p-4">
+                        <p class="fs-4 fw-bold">Bills</p>
+                        <div class="border-bottom rounded  d-flex p-2">
+                            <div class="w-25">
+                                <p class="fw-bold m-0"> Bills</p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0">Amount</p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0"> Balance</p>
+                            </div>
+                            <div class="w-25">
+                               <p class="fw-bold m-0"> Status</p>
+                            </div>
+                        </div>
+                        <div class=" rounded  d-flex p-2">
+                            <div class="w-25">
+                                <p class=" m-0"> Room</p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0">$40, 000</p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0"> - </p>
+                            </div>
+                            <div class="w-25">
+                               <p class="fw-bold m-0 text-success"> Balanced</p>
+                            </div>
+                        </div>
+                        <div class=" rounded  d-flex p-2">
+                            <div class="w-25">
+                                <p class=" m-0"> Dining & Bar </p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0 ">$15, 000</p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0 text-danger"> 15, 5000 </p>
+                            </div>
+                            <div class="w-25">
+                               <p class="fw-bold m-0 text-danger">On Debt </p>
+                            </div>
+                        </div>
+                        <div class=" border-top rounded  d-flex p-2">
+                            <div class="w-25">
+                                <p class="fw-bold m-0"> Total  </p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0">$55, 000</p>
+                            </div>
+                            <div class="w-25">
+                                <p class="fw-bold m-0 text-danger"> $15, 000 </p>
+                            </div>
+                            <div class="w-25">
+                               <p class="fw-bold m-0 text-danger">On Debt </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <button class="btn btn-primary" (click)="checkOut()"> Checkout Guest </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-display rounded bg-white px-5 py-3" *ngIf="successMessage">
+    <div class="text-center">
+        <div class="d-flex justify-content-center px-3 text-success fw-bold">
+            You have successfully checked out {{guestDetails.firstname}} {{guestDetails.lastname}} from room {{guestDetails.room_name}} <br>
+            you will be redirected shortly 
+        </div>
+    </div>
+</div>

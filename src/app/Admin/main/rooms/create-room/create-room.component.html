@@ -1,0 +1,53 @@
+<div class="j-d-flex j-dashboard">
+    <div class="j-w-20 j-left">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="j-w-80 j-right">
+        <div class="j-nav-bar-holder">
+            <app-header title="Guest"></app-header>
+        </div>
+        
+        <div class="main-content px-3">
+            <div class="pt-4">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                    <p class="fw-bold fs-5">Add Room </p>
+                </div>
+            </div>
+            <div class="container bg-white p-4 w-100">
+                <div class="w-75">
+                    <form enctype="multipart/form-data" [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+                        <div>
+                            <label for="" class="text-black"> Room Name :</label>
+                            <input type="text" class="form-control" placeholder="Room Name" formControlName="roomName">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Room Description :</label>
+                            <input type="text" class="form-control" placeholder="Description" formControlName="roomDescription">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Room Price :</label>
+                            <input type="text" class="form-control" placeholder="Price" formControlName="roomPrice">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Room Access Code:</label>
+                            <input type="text" class="form-control" placeholder="Access code " formControlName="roomAccessCode">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Room Contact </label>
+                            <input type="text" class="form-control" placeholder="Room Contact" formControlName="roomContact">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black">Select File </label>
+                            <input type="file" class="form-control" placeholder="" name="roomImage" (change)="onSelectFile($event)">
+                        </div>
+                        <div class="w-100 mt-4">
+                            <button type="submit" class="btn btn-primary w-100"> Create </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-success-modal (modalClose)="displayOff()" *ngIf="showModal" text="Room was created successfully"></app-success-modal>

@@ -1,0 +1,55 @@
+.mt {
+    margin-top: 8rem;
+}
+
+.bg {
+    background-color: #f4f4f4;
+}
+.loadingModal {
+    position: absolute;
+    height: 100%;
+    top:20vh;
+    background-image: (rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    left:50%;
+    transform: translateX(-50%);
+}
+.relative {
+    position:relative;
+}
+.success-modal-con {
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 2px 2px 8px rgb(138, 131, 131);
+    top:2rem;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width:25rem;
+    padding:1rem;
+}
+.og-flex {
+    display: flex;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .d-flex  {
+        display: block !important;
+    }
+    .w-50 {
+        width: 100% !important;
+    }
+    .center-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mt{
+        margin: 0;
+    }
+    .out{
+        margin-top: 1rem;
+    }
+}

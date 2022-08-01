@@ -1,0 +1,100 @@
+.cards-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding:5% 7%;
+    gap:3%;
+    text-align:center;
+ h4{
+    margin-bottom: 1rem;
+    font-size:1.3rem;
+}
+ p {
+    font-size:1rem;
+}
+}
+.rooms-container {
+    background-color: rgba(251, 249, 249, 0.958);
+    padding:5% 7%;
+    h2 {
+    text-align:center;
+    margin-bottom: 1rem;
+    }
+     p {
+    text-align:center;
+    width:70%;
+    margin:0.5rem auto;
+    }
+}
+.room-list {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    margin-top:5rem;
+    gap:3%;
+    text-align:center;
+    img {
+    width:100%;
+    }
+    .price {
+    font-size: 3rem;
+    font-weight:600;
+    color:rgb(120, 120, 209)
+    }
+ h5 {
+    margin:1rem;
+    font-size:1.3rem;
+    }
+}
+.price-margin {
+    margin: 3rem
+}
+.orange-bg {
+    background-color: orange;
+}
+.white-card {
+    background-color: white;
+    padding:10%;
+
+    h4 {
+    margin: 2rem;
+    font-size:1.2rem;
+    }
+    h6 {
+    margin-bottom: 2rem ;
+    font-size:0.9rem
+    }
+    p {
+    font-size:0.9rem;
+    }
+}
+.reveiw-img {
+    width:50% !important;
+    border-radius: 50%;
+}
+
+.center-con {
+    display:flex;
+    justify-content: center;
+    border: 0;
+}
+.margin{
+    margin: auto;
+}
+.negative-m {
+    margin-top: -5rem;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .room-list {
+        display: grid;
+        gap: unset
+    }
+    .d-flex {
+        display: block !important;
+        width:100%
+    }
+    .w-25 {
+        width: 100% !important;
+    }
+}

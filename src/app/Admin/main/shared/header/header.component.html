@@ -1,0 +1,38 @@
+<div class="j-header-container">
+    <div class="j-header-inner-container">
+        <div class="j-dashboard-text mb-4 fs-5 fw-bold ">
+           {{title}}
+        </div>
+        <div>
+            <div class="j-box">
+                <div class="j-box-inner">
+                    <div class="j-big-circle position-relative" title="Online Status">
+                        <div>NA</div>
+                        <span class="position-absolute start-100 translate-middle badge border border-light rounded-circle bg-success p-2" style="bottom: -7px;"><span class="visually-hidden">unread messages</span></span>
+                    </div>
+        
+                    <div class="position-relative">
+                        <div class="cursor-pointer d-flex align-items-center">
+                            <div>
+                                <div class="j-fw-600"> {{firstName}} {{lastName}} </div>
+                                <div><small> {{role | titlecase}} </small></div>
+                            </div>
+                            <div class="j-ml-30">
+                                <img src="assets/images/down-arr.png" alt="">
+                            </div>
+                        </div>
+                        <!-- <div class="position-absolute j-dropdown-content shadow">
+                            <div class="j-dropdown-item j-border-bottom cursor-pointer" [routerLink]="['/admin/dashboard/qrcode']" title="QR Code" >QR Code</div>
+                            <div class="j-dropdown-item cursor-pointer" [routerLink]="['/admin/dashboard/changepassword']" title="Change Password">Change Password</div>
+                        </div> -->
+                    </div>
+                </div>
+    
+                <div class="j-notification position-relative cursor-pointer" [routerLink]="['/admin/dashboard/notification']" title="Notification" >
+                    <img src="assets/imgs/bell-icon.png" alt="">
+                    <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger"><span style="font-size: 8px">2</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

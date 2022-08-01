@@ -1,0 +1,66 @@
+.j-nav-item-holder{
+    margin: 10px 20px 0 0;
+    display: flex;
+    padding-left: 33px;
+    .j-nav-item{
+        display: flex;
+        padding: 5px;
+        width: 100%;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+}
+
+.j-nav-item-holder:hover, .j-nav-item-holder-active{
+    border-left: 2px solid #F39519;
+    .j-nav-item{
+        background: #F39519
+    }
+}
+.settings-children{
+    margin: 10px 20px 0 35px;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(16,54,101);
+    cursor: pointer;
+    .setting-border {
+        border-bottom: 1px solid gray;
+    }
+}
+.j-dashboard{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+.j-logo-container{
+    width: 80px;
+    margin: 30px auto;
+    img{
+        width: 100%
+    }
+}
+.logout {
+    position: absolute;
+    bottom: 5px;
+    margin: 0 2rem;
+    width:75%;
+    z-index: -1;
+    border-radius:5px;
+    cursor: pointer;
+}
+.logout-top{
+    position: absolute;
+    bottom: 48px;
+    width:75%;
+    z-index: -1;
+    margin: 0 2rem;
+}
+.main-a {
+    color:white;
+}
+.active{
+    background-color: #F39519;
+}

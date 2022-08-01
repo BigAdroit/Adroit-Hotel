@@ -1,0 +1,71 @@
+<div class="j-d-flex j-dashboard">
+    <div class="j-w-20 j-left">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="j-w-80 j-right">
+        <div class="j-nav-bar-holder">
+            <app-header title="Guest"></app-header>
+        </div>
+        
+        <div class="main-content px-3">
+            <div class="pt-4">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                    <p class="employees">All Guest <span>{{totalGuest}}</span></p>
+                    <button class="btn btn-primary" routerLink="create-guest"> Create Guest</button>
+                </div>
+            </div>
+            <div class="container bg-white p-4 w-100">
+                <app-table-head></app-table-head>
+                <div>
+                    <div class="heading d-flex justify-space-between  main-content text-left p-3 mt-3 role b-rad">
+                        <div class="w-25 fw-bold">
+                            Guest Name
+                        </div>
+                        <div class="w-25 fw-bold">
+                            Clock-In
+                        </div>
+                        <div class="w-25 fw-bold">
+                            Clock-Out
+                        </div>
+                        <div class="w-10 fw-bold">
+                            Room
+                        </div>
+                        <div class="w-15 fw-bold">
+                            Action
+                        </div>
+                    </div>
+                    <div class="justify-content-between d-flex text-left p-3 my-2 border-bottom align-items-center hover pointer rounded" routerLink="view-guest/{{guest._id}}" *ngFor="let guest of Guests | paginate: { itemsPerPage: 5, currentPage: p }">
+                        <div class="w-25 left-align fw-bold">
+                            {{guest.firstname}} {{guest.lastname}}
+                        </div>
+                        <div class="w-25">
+                            <p>{{guest.clock_in_date}}</p>
+                        </div>
+                        <div class="w-25">
+                            <p> {{guest.clock_out_date}} </p>
+                        </div>
+                        <div class="w-10">
+                            <p> {{guest.room_name}} </p>
+                        </div>
+                        <div class="w-15 d-flex gap-1 px-2 align-items-center pointer" routerLink="view-guest/{{guest._id}}">
+                            <div>
+                                <img src="assets/imgs/eye pass.svg" alt="">
+                            </div>
+                            <p class="m-0">View</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Pagination  -->
+                <div class="d-flex justify-content-between p-3 mt-4 pointer">
+                    <div>
+                        Showing {{Guests?.length ? Guests.length: 0}} out of {{Guests?.length ? Guests.length: 0}}
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center gap-3 pointer">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

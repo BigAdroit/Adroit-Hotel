@@ -1,0 +1,41 @@
+<div class="j-d-flex j-dashboard">
+    <div class="j-w-20 j-left">
+        <app-navbar> </app-navbar>
+    </div>
+    <div class="j-w-80 j-right">
+        <div class="j-nav-bar-holder">
+            <app-header></app-header>      
+        </div>
+        <div>
+            <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+                <div class="form-group">
+                    <input type="text" placeholder="firstname" class="form-control" formControlName="firstname">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="lastname" class="form-control" formControlName="lastname">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="email" class="form-control" formControlName="email">
+                </div>
+                <div formArrayName="employees">
+                    <ng-multiselect-dropdown
+                    [placeholder]="'custom placeholder'"
+                    [settings]="dropdownSettings"
+                    [data]="dropdownList"
+                    class="form-control"
+                    [(ngModel)]="selectedItems"
+                    (onSelect)="onItemSelect($event)"
+                    (onSelectAll)="onSelectAll($event)"
+                    [ngModelOptions]="{standalone: true}"
+
+                    >
+                    </ng-multiselect-dropdown>
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary"> Submit </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

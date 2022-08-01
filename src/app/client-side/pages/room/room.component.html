@@ -1,0 +1,17 @@
+<div class="rooms-container">
+    <h2> Room & Suites</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi necessitatibus praesentium perferendis reiciendis voluptatibus omnis nobis quod voluptate. Aut.</p>
+    <!--  Using the ngFir to loop through the rooms in the array -->
+    <div class="room-list">
+        <div *ngFor ="let rm of rooms" class="m-2">
+            <img src="{{rm.cloudinary_url}}" alt="" srcset="">
+            <div>
+                <h5>{{rm.roomName}}</h5>
+                <p class="price-margin"><span>$</span><span class="price">{{rm.roomPrice}}</span><span>/ per night</span></p>
+                <p>Pefect for traveling couples</p>
+                <p>{{rm.roomDescription}}</p>
+                <button class="btn btn-primary px-5" [disabled]="rm.isBusy" routerLink="/book-room/{{rm._id}}">Book</button>
+            </div>
+        </div>
+    </div>
+</div>

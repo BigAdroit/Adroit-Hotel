@@ -1,0 +1,32 @@
+<div class="rooms-container">
+    <h2> Menus</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi necessitatibus praesentium perferendis reiciendis voluptatibus omnis nobis quod voluptate. Aut.</p>
+
+    <div class="room-list">
+        <div class="margin-left mx-3 mb-3" *ngFor="let food of Foods">
+            <img src="../../assets/imgs/{{food.image}}" alt="" srcset="">
+            <div>
+                <h5>{{food.name}}</h5>
+                <p class="price-margin"><span>$</span><span class="price">{{food.price}}</span><span>/ per plate</span></p>
+                <button class="btn btn-primary px-5">Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  ============== Drinks ================== -->
+<div class="rooms-container">
+    <h2> Drinks</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quasi necessitatibus praesentium perferendis reiciendis voluptatibus omnis nobis quod voluptate. Aut.</p>
+
+    <div class="room-list">
+        <div class="margin-left mx-3 mb-3" *ngFor="let drink of Drinks">
+            <img src="../../assets/imgs/{{ drink.image}}" alt="" srcset="">
+            <div>
+                <h5>{{drink.name}}</h5>
+                <p class="price-margin"><span>$</span><span class="price">{{drink.price}}</span><span>/ per night</span></p>
+                <button class="btn btn-primary px-5">Order</button>
+            </div>
+        </div>
+    </div>
+</div>

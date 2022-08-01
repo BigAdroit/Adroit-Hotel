@@ -1,0 +1,31 @@
+<div class="header-nav">
+    <h4>Adroit Hotel</h4>
+    <nav class="nav-bar" [class.d-block]="toggleHamburger">
+        <ul>
+            <li routerLink="" routerLinkActive="active" class="pointer" (click)="toggleHamburger = !toggleHamburger">Home </li>
+            <li routerLink="/room" routerLinkActive="active" class="pointer" (click)="toggleHamburger = !toggleHamburger"> Rooms </li>
+            <li routerLink="/dining" routerLinkActive="active" class="pointer" (click)="toggleHamburger = !toggleHamburger">Dining & Bar</li>
+            <li routerLink="/service" routerLinkActive="active" class="pointer" (click)="toggleHamburger = !toggleHamburger">Services</li>
+            <li routerLink="/about" routerLinkActive="active" class="pointer" (click)="toggleHamburger = !toggleHamburger">About</li>
+        </ul>
+    </nav>
+    <div class="toggle-icon" (click)="toggleHamburger = !toggleHamburger">
+        <div class="hamburger" [class.open]="toggleHamburger">
+            <div class="hamburger-top"></div>
+            <div class="hamburger-middle"></div>
+            <div class="hamburger-bottom"></div>
+        </div>
+    </div>
+</div>
+<section class="section-header {{carouselImages[counter]}}">
+    <div class="header">
+        <p> Discover and Enjoy </p>
+        <h4> Everything you need in Adroit Hotel</h4>
+        <div class="d-flex none justify-content-center align-items-center">
+            <div>
+                <app-button text="view details" class="blue-bg" routerLink="/room" ></app-button>
+                <app-button text="Know more" class="orange-bg"  routerLink="/about"></app-button>
+            </div>
+        </div>
+    </div>
+</section>

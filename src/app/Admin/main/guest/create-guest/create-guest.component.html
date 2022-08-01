@@ -1,0 +1,68 @@
+<div class="j-d-flex j-dashboard">
+    <div class="j-w-20 j-left">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="j-w-80 j-right">
+        <div class="j-nav-bar-holder">
+            <app-header title="Guest"></app-header>
+        </div>
+        
+        <div class="main-content px-3">
+            <div class="pt-4">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                    <p class="fw-bold fs-5">Create Guest </p>
+                    
+                </div>
+            </div>
+            <div class="container bg-white p-4 w-100">
+                <div class="w-75">
+                    <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+                        <div>
+                            <label for="" class="text-black"> Firstname :</label>
+                            <input type="text" class="form-control" placeholder="John" formControlName="firstname">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Lastname :</label>
+                            <input type="text" class="form-control" placeholder="Doe" formControlName="lastname">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Email Address :</label>
+                            <input type="text" class="form-control" placeholder="example@adroithotel" formControlName="email">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Phone:</label>
+                            <input type="text" class="form-control" placeholder="0817346621" formControlName="phone">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black"> Select Room:</label>
+                            <select name="" class="form-control" id="" formControlName="room_name">
+                                <option value="" selected> Select room</option>
+                                <option *ngFor="let room of rooms" value="{{room.roomName}}" > {{room.roomName}} </option>
+                            </select>
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black">Clock in Date</label>
+                            <input type="date" class="form-control" placeholder="" formControlName="clock_in_date">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black">Clock out Date</label>
+                            <input type="date" class="form-control" placeholder="" formControlName="clock_out_date">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black">Clock in Time</label>
+                            <input type="time" class="form-control" placeholder="" formControlName="clock_in_time">
+                        </div>
+                        <div class="mt-2">
+                            <label for="" class="text-black">Clock out Time</label>
+                            <input type="time" class="form-control" placeholder="" formControlName="clock_out_time">
+                        </div>
+
+                        <div class="w-100 mt-4">
+                            <button type="submit" class="btn btn-primary w-100"> Create </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+.has-search .form-control {
+    padding-right: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    right:2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.filter {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    left: 0 !important;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+.filter-pad {
+    padding-left:2.375rem;
+}
+.w-60 {
+    width: 57%
+}
+.w-40 {
+    width: 40%;
+}
+.w-70 {
+    width:70%;
+}
+.w-30 {
+    width:30%;
+}
+.w-35 {
+    width:35%
+}
+select, input {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.background{
+    background-color:#F8F8F8;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    
+}
+
+.bg-bg{
+    background-color:#F8F8F8;
+    box-shadow:none;
+}
+.size{
+    width:40%;
+}
+.border-10{
+    border-radius:10px;
+}
+.font{
+    font-size:14px;
+}

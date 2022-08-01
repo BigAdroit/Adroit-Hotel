@@ -1,0 +1,65 @@
+<div class="j-logo-container">
+    <img src="assets/images/adminlogo.svg" alt="">
+</div>
+<div class="j-my-30 j-mx-30">Main Menu</div>
+<div class="">
+    <div class="j-nav-item-holder" [routerLink]="['/admin/dashboard']" routerLinkActive="j-nav-item-holder-active" >
+        <div class="j-nav-item gap-2 p-2">
+            <img src="assets/imgs/dash-iicon.svg" alt="">
+            <div>Dashboard</div>
+        </div>
+    </div>
+    <div class="j-nav-item-holder" [routerLink]="['/admin/bookings']" routerLinkActive="j-nav-item-holder-active">
+        <div class="j-nav-item gap-2 p-2">
+            <img src="assets/imgs/timesheet-icon.svg" alt="">
+            <div>Bookings</div>
+        </div>
+    </div>
+    <div class="j-nav-item-holder" [routerLink]="['/admin/rooms']" routerLinkActive="j-nav-item-holder-active">
+        <div class="j-nav-item gap-2 p-2">
+            <img src="assets/imgs/company-icon.svg" alt="">
+            <div>Rooms</div>
+        </div>
+    </div>
+    <div class="j-nav-item-holder" [routerLink]="['/admin/guest']" routerLinkActive="j-nav-item-holder-active">
+        <div class="j-nav-item gap-2 p-2">
+            <img src="assets/imgs/employee-icon.svg" alt="">
+            <div>Guests</div>
+        </div>
+    </div>
+    <div class="j-nav-item-holder" [routerLink]="['/admin/employees']" routerLinkActive="j-nav-item-holder-active">
+        <div class="j-nav-item gap-2 p-2">
+            <img src="assets/imgs/manage-job-icon.svg" alt="">
+            <div>Employees</div>
+        </div>
+    </div>
+    <!-- <div class="settings-children">
+        <div class="my-1 setting-border p-1" [routerLink]="['/admin/settings/department']">Payroll</div>
+        <div class="my-1 setting-border p-1" [routerLink]="['/admin/settings/workday']">Timesheet</div>
+        <div class="my-1 p-1" [routerLink]="['/admin/settings/users']">Services</div>
+    </div> -->
+    <div class="j-nav-item-holder" [routerLink]="['/admin/dining-bar']" routerLinkActive="j-nav-item-holder-active">
+        <div class="j-nav-item gap-2 p-2">
+            <img src="assets/imgs/payroll.svg" alt="">
+            <div>Dining & Bar </div>
+        </div>
+    </div>
+    <div class="j-nav-item-holder" [routerLink]="['/admin/settings']" routerLinkActive="j-nav-item-holder-active">
+        <div class="j-nav-item gap-2 p-2 d-flex justify-content-between align-items-center">
+            <div class="j-nav-item gap-2 d-flex align-items-center p-0">
+                <img src="assets/imgs/setting-icon.svg" alt="">
+                <div>Settings</div>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <hr class="logout-top">
+    <div class="logout d-flex bg-dark text-center px-3 py-2 justify-content-center gap-4" (click)="logout()">
+        <div class="">Logout</div>
+        <img src="assets/imgs/logout-icon.svg" alt="">
+    </div>
+</div>    
+
